@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="dmy" type="date" placeholder="nhap ngay de xac nhan ban co du 18t">
+    <button id="btncheck">check</button>
+    <span id="display"></span>
+
+    <script>
+        var dmy= document.getElementById("dmy");
+        var btncheck= document.getElementById("btncheck");
+        var display= document.getElementById("display");
+
+        btncheck.onclick= ()=>{
+            var today= new Date();
+            var mydate= new Date(dmy.value);
+            var a= today.getFullYear()-mydate.getFullYear();
+            var b= today.getDate()- mydate.getDate();
+            var c= today.getMonth()- mydate.getMonth();
+           
+            if (a>18) {display.innerText="du 18 roi"}
+            else if (a<18) {display.innerText="chua du 18 "}
+            else if (a==18)
+                if (c>=0) {display.innerText="du 18 roi"}
+                else if (c<0) {display.innerText="chua du 18 "}
+                else if (c==0)
+                    if (b>=0) {display.innerText="du 18 roi"}
+                    else {display.innerText="chua du 18 "}
+
+
+            
+        }
+    </script>
+    
+</body>
+</html>

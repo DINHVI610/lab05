@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="em" type="text" placeholder="nhap email">
+    <button id="btncheck">check</button>
+    <span id="display"></span>
+
+    <script>
+        var em= document.getElementById("em");
+        var btncheck=document.getElementById("btncheck");
+        var display= document.getElementById("display");
+
+        btncheck.onclick=()=>{
+            var pattern=/^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+            if (pattern.test(em.value)){
+                display.innerText= "success"
+            }
+            else display.innerText= "error"
+        }
+    </script>
+</body>
+</html>

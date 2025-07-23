@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="dmy" type="date" placeholder="nhap ngay sinh cua be">
+    <button id="btncheck">check</button>
+    <span id="display"></span>
+
+    <script>
+        var dmy= document.getElementById("dmy");
+        var btncheck= document.getElementById("btncheck");
+        var display= document.getElementById("display");
+
+        btncheck.onclick= ()=>{
+            var today= new Date();
+            var mydate= new Date(dmy.value);
+
+            if (today> mydate) { display.innerText=" thank u"}
+            else display.innerText= "nhap lai nha"
+        }
+    </script>
+    
+</body>
+</html>
