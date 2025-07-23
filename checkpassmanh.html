@@ -20,6 +20,8 @@
 
         btncheck.onclick=()=>{
             var pattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+                        
+                    
 
             if (pattern.test(pass.value)){
                 display.innerText= "success"

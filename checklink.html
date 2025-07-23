@@ -18,6 +18,7 @@
 
         btncheck.onclick=()=>{
             var pattern=/^(https?:\/\/)[^\s/$.?#].[^\s]*$/i;
+                    
             if (pattern.test(link.value)){
                 display.innerText= "success"
             }
