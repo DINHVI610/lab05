@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="link">nhap link</label>
+    <input id="link" type="text" placeholder="https:...">
+    <button id="btncheck">check</button>
+    <span id="display"></span>
+
+    <script>
+        var link= document.getElementById("link");
+        var btncheck=document.getElementById("btncheck");
+        var display= document.getElementById("display");
+
+        btncheck.onclick=()=>{
+            var pattern=/^(https?:\/\/)[^\s/$.?#].[^\s]*$/i;
+            if (pattern.test(link.value)){
+                display.innerText= "success"
+            }
+            else display.innerText= "error"
+        }
+    </script>
+</body>
+</html>
