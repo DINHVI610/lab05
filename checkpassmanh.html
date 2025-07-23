@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="pass">
+        Tối thiểu 8 ký tự,
+        Chứa ít nhất 1 chữ cái viết hoa, 1 chữ cái thường, 1 số, 1 ký tự đặc biệt</label>
+    <input id="pass" type="text" placeholder="tao pass manh">
+    <button id="btncheck">check</button>
+    <span id="display"></span>
+
+    <script>
+        var pass= document.getElementById("pass");
+        var btncheck=document.getElementById("btncheck");
+        var display= document.getElementById("display");
+
+        btncheck.onclick=()=>{
+            var pattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+            if (pattern.test(pass.value)){
+                display.innerText= "success"
+            }
+            else display.innerText= "error"
+        }
+    </script>
+</body>
+</html>
